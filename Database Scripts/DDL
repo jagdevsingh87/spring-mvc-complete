@@ -1,0 +1,11 @@
+--
+CREATE SCHEMA IF NOT EXISTS company;
+use company;
+
+create table employee (
+      id integer NOT NULL AUTO_INCREMENT,
+      first_name varchar(40) not null,
+	  last_name varchar(40) not null,
+	  email varchar(40) not null,
+      PRIMARY KEY (id)
+);

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/default">
+<body>
+	<div id="page" layout:fragment="content">
+		<div class="pb-2">Welcome to employee portal</div>
+		<form action="#" th:action="@{/employee}" th:object="${employee}" method="post">
+		   
+		    <input name="id" type="hidden" th:field="*{id}"/>
+			<div class="form-group row">
+				<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+				<div class="col-sm-5">
+					<input type="email" class="form-control" id="inputEmail3"
+						placeholder="Email" th:field="*{email}">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputEmail3" class="col-sm-2 col-form-label">First
+					Name</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="inputEmail3"
+						placeholder="First Name" th:field="*{firstName}">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="inputEmail3" class="col-sm-2 col-form-label">Last
+					Name</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="inputEmail3"
+						placeholder="Last Name" th:field="*{lastName}">
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-10">
+					<button type="submit" class="btn btn-primary">Register</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

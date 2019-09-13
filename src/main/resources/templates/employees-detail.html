@@ -12,6 +12,7 @@
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Email</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -23,6 +24,7 @@
 					<td><span th:text="${employee.firstName}"> First Name </span></td>
 					<td><span th:text="${employee.lastName}"> Last Name </span></td>
 					<td><span th:text="${employee.email}"> Email </span></td>
+					<td><a th:href="@{/employee/update(employeeId=${employee.id})}"><span th:text="Update"></span></a><a class="pl-2" th:href="@{/employee/delete(employeeId=${employee.id})}"><span th:text="Delete"></span></a></td>
 				</tr>
 			</tbody>
 		</table>
